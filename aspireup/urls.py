@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('authentication.urls')),
     path('subjects/',include('subjects.urls')),
+    path('topics/',include('topics.urls')),
+    path('add_docs/',include('add_docs.urls')),
 ]
