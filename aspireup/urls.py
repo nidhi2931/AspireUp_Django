@@ -24,3 +24,4 @@ urlpatterns = [
     path('topics/',include('topics.urls')),
     path('add_docs/',include('add_docs.urls')),
 ]
+

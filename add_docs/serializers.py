@@ -4,8 +4,8 @@ from topics.models import *
 
 class AddDocsSerializer(serializers.ModelSerializer):
     topic = serializers.PrimaryKeyRelatedField(queryset=Topic.objects.all())
-    topic_name=serializers.CharField(source='topic.name')
-    subject_name=serializers.CharField(source='topic.subject.name')
+    topic_name=serializers.CharField(source='topic.name',required=False,allow_null=True)
+    subject_name=serializers.CharField(source='topic.subject.name',required=False,allow_null=True)
 
     class Meta:
         model = AddDoc
